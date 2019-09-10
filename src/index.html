@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Weather App Coders Camp</title>
+    <meta name="description" content="Projekt aplikacji pogodowej na Coders Camp">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" keywords="Weather App, Coders Camp, CSS, HTML, projekt">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Ubuntu:400,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<main class="title">
+    <h1 id="app_title">My weather</h1>
+        <form class="search">
+            <!--<textarea id="test">Tekst</textarea>-->
+            <input id="putCity" type="text" placeholder="Put city name" onClick="this.select();">
+            <ul class="suggestions">
+                <li>Podpowiedzi wyszukiwarki</li>
+            </ul>
+            <input id="showWeather" type="button" value="Show weather"/>
+        </form>
+</main>
+<main class="content">
+    <div class="wrapper">
+        <header>
+            <div class="topHeader">
+                <div class="autolocal">
+                    <div><p>Save as default:</p></div>
+                    <div class="round">
+                            <input type="checkbox" class="autolocalisation" >
+                            <label for="checkbox"></label>
+                    </div>
+                </div>
+        </header>
+        <main>
+            <section class="cover">
+                <div class="weather-now">
+                    <div class="app-title">
+                        <h1>Current weather</h1>
+                    </div>
+                    <div class="notification"></div>
+                    <div class="weather-container">
+                        <!-- <img src="" alt="overlay" class="overlayer"> -->
+                        <div class="weather-icon"><img src="icons/unknown.svg" alt="Unknown weather"></div>
+                        <div class="temperature-value">
+                            <p>- °<span>C</span></p>
+                        </div>
+                        <div class="temperature-description">
+                            <p> - </p>
+                        </div>
+                        <div class="location">
+                            <p>-</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-hours">
+                    <div class="app-title"><h1>Next hours</h1></div>
+                    <div class="hours-bottom">
+                        <div class="hours weather-container">
+                            <div class="weather-icon"><img src="icons/unknown.svg" alt="Unknown weather"></div>
+                            <div class="temperature-value">
+                                <p>- °<span>C</span></p>
+                            </div>
+                            <div class="temperature-description">
+                                <p> - </p>
+                            </div>
+                            <div class="location">
+                                <p>-</p>
+                            </div>
+                        </div>
+                        <div class="hours weather-container">
+                            <div class="weather-icon"><img src="icons/unknown.svg" alt="Unknown weather"></div>
+                            <div class="temperature-value">
+                                <p>- °<span>C</span></p>
+                            </div>
+                            <div class="temperature-description">
+                                <p> - </p>
+                            </div>
+                            <div class="location">
+                                <p>-</p>
+                            </div>
+                        </div>
+                        <div class="hours weather-container">
+                            <div class="weather-icon"><img src="icons/unknown.svg" alt="Unknown weather"></div>
+                            <div class="temperature-value">
+                                <p>- °<span>C</span></p>
+                            </div>
+                            <div class="temperature-description">
+                                <p> - </p>
+                            </div>
+                            <div class="location">
+                                <p>-</p>
+                            </div>
+                        </div>
+                        <div class="hours weather-container">
+                            <div class="weather-icon"><img src="icons/unknown.svg" alt="Unknown weather"></div>
+                            <div class="temperature-value">
+                                <p>- °<span>C</span></p>
+                            </div>
+                            <div class="temperature-description">
+                                <p> - </p>
+                            </div>
+                            <div class="location">
+                                <p>-</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class='test'>
+                <section class="week">
+                    <div class="app-title"><h1>Next week</h1></div>
+                    <div class="days-container">
+                        <div class="days weather-container">
+                            <div class="weather-icon"><img src="icons/unknown.svg" alt="Unknown weather"></div>
+                            <div class="temperature-value">
+                                <p>- °<span>C</span></p>
+                            </div>
+                            <div class="temperature-description">
+                                <p> - </p>
+                            </div>
+                            <div class="location">
+                                <p>-</p>
+                            </div>
+                        </div>
+                        <div class="days weather-container">
+                            <div class="weather-icon"><img src="icons/unknown.svg" alt="Unknown weather"></div>
+                            <div class="temperature-value">
+                                <p>- °<span>C</span></p>
+                            </div>
+                            <div class="temperature-description">
+                                <p> - </p>
+                            </div>
+                            <div class="location">
+                                <p>-</p>
+                            </div>
+                        </div>
+                        <div class="days weather-container">
+                            <div class="weather-icon"><img src="icons/unknown.svg" alt="Unknown weather"></div>
+                            <div class="temperature-value">
+                                <p>- °<span>C</span></p>
+                            </div>
+                            <div class="temperature-description">
+                                <p> - </p>
+                            </div>
+                            <div class="location">
+                                <p>-</p>
+                            </div>
+                        </div>
+                        <div class="days weather-container">
+                            <div class="weather-icon"><img src="icons/unknown.svg" alt="Unknown weather"></div>
+                            <div class="temperature-value">
+                                <p>- °<span>C</span></p>
+                            </div>
+                            <div class="temperature-description">
+                                <p> - </p>
+                            </div>
+                            <div class="location">
+                                <p>-</p>
+                            </div>
+                        </div>
+                        <div class="days weather-container">
+                            <div class="weather-icon"><img src="icons/unknown.svg" alt="Unknown weather"></div>
+                            <div class="temperature-value">
+                                <p>- °<span>C</span></p>
+                            </div>
+                            <div class="temperature-description">
+                                <p> - </p>
+                            </div>
+                            <div class="location">
+                                <p>-</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <!--<p>Copyrights &copy 2019 CodersCamp</p>-->
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+    </body>
+
+</html>
