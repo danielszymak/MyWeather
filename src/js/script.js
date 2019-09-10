@@ -3,8 +3,8 @@ const endpoint = 'https://raw.githubusercontent.com/cc-team-2019/weather-APP/mas
 const cities = [];
 const kelvin = 273
 const key = "82005d27a116c2880c8f0fcb866998a0"
-let searchedLat;
-let searchedLon;
+var searchedLat;
+var searchedLon;
 const notificationElement = document.querySelector('.notification')
 
 fetch(endpoint)
@@ -59,7 +59,10 @@ else{
 //GEO start
 function setPosition(position) {
     let latitude = position.coords.latitude
+
     let longitude = position.coords.longitude
+    searchedLat = latitude;
+    searchedLon = longitude;
     getWeather(latitude, longitude)
 }
 
@@ -74,10 +77,17 @@ function showError(error) {
 document.getElementById("button_set").addEventListener('click', isSetDefault);
 
 function isSetDefault(){
+    if(searchedLon == null){
+        alert("Wybierz pozycje!");
+    }
     if (typeof(Storage) !== "undefined"){
+        if(searchedLat != "undefined" && searchedLon != "undefined" && searchedLon != null && searchedLat !=  null){
         localStorage.setItem("lat", searchedLat);
         localStorage.setItem("lon", searchedLon);
         console.log("lat "+localStorage.getItem("lat")+", long "+localStorage.getItem("lon"))
+        }else{
+            alert("Wybierz pozycje!"); 
+        }
     }
 }
 
