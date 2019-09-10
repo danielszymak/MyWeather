@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="utf-8">
@@ -10,37 +10,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Ubuntu:400,700&display=swap&subset=latin-ext"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
-<main class="title">
-    <h1 id="app_title">My weather</h1>
-        <form class="search">
-            <!--<textarea id="test">Tekst</textarea>-->
-            <input id="putCity" type="text" placeholder="Put city name" onClick="this.select();">
-            <ul class="suggestions">
-                <li>Podpowiedzi wyszukiwarki</li>
-            </ul>
-            <input id="showWeather" type="button" value="Show weather"/>
-        </form>
-</main>
 <main class="content">
     <div class="wrapper">
-        <header>
+        <div>
             <div class="topHeader">
-                <div class="autolocal">
-                    <div><p>Save as default:</p></div>
-                    <div class="round">
-                            <input type="checkbox" class="autolocalisation" >
-                            <label for="checkbox"></label>
+                <div class="search">
+                    <input id="putCity" type="text" placeholder="Put city name" onClick="this.select();">
+                    <ul class="suggestions">
+                        <li>Podpowiedzi wyszukiwarki</li>
+                    </ul>
+                </div>
+                <div class="autolocal" >
+                    <div class="text" ><p>Save as default:</p></div>
+                    <div class="button-container" >
+                           <button id="button_set" style="margin-bottom: 2px">Set</button><br />
+                           <button id="button_delete">Delete</button>
                     </div>
                 </div>
+            </div>
         </header>
         <main>
             <section class="cover">
                 <div class="weather-now">
                     <div class="app-title">
-                        <h1>Current weather</h1>
+                        <h1>My Weather</h1>
                     </div>
                     <div class="notification"></div>
                     <div class="weather-container">
@@ -111,7 +106,7 @@
                     </div>
                 </div>
             </section>
-            <section class='test'>
+            <section class="test">
                 <section class="week">
                     <div class="app-title"><h1>Next week</h1></div>
                     <div class="days-container">
@@ -179,9 +174,9 @@
                 </section>
             </section>
         </main>
-        <footer>
-            <!--<p>Copyrights &copy 2019 CodersCamp</p>-->
-        </footer>
+        <!--<footer>
+            <p>Copyrights &copy 2019 CodersCamp</p>
+        </footer>-->
     </div>
     <script src="js/script.js"></script>
     <script type="text/javascript" src="bundle.js"></script></body>

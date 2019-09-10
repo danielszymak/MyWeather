@@ -22,64 +22,27 @@ body {
     font-family: 'Raleway', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.title {
-    position: fixed;
-    background: url(../photo/title_photo.jpg);
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-}
-.title h1 {
-    font-size: 2em;
-    font-family: 'Pacifico', cursive;
-    margin-top: 15vh;
-    margin-bottom: 5vh;
-    color: whitesmoke;
-}
-.title form {
-    display: grid;
-    position: relative;
-    grid-template-rows: 10vh 30px 40px;
-    grid-template-columns: 1fr;
-    grid-gap: 40px;
-}
-.title #putCity {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    justify-self: center;
-    width: 80vw;
-    max-width: 400px;
-    text-align: center;
-    border-radius: 20px;
-    background-color: var(--shadow);
-    border: 2px solid orange;
-    font-size: 0.8em;
-    text-transform: capitalize;
-}
-.title #showWeather{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    justify-self: center;
-    width: 60vw;
-    max-width: 300px;
-    border-radius: 20px;
-    color: grey;
-    background-color: var(--shadow);
-    border: 2px solid orange;
-}
-
-.content {
-    display: none;
-}
-
 a {
     text-decoration: none;
     color: var(--text-color);
 }
+.search {
+    width: 60%;
+    display: flex;
+    justify-content: center;    
+}
+.search input {
+    text-align: center;
+    border-radius: 15px;
+    background-color: var(--background-color-two);
+    border: none;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 40px;
+    text-transform: capitalize;
+}
 .autolocal {
-    width: 30%;
+    width: 35%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -102,24 +65,15 @@ input:focus {
 }
 .suggestions {
     position: absolute;
-    grid-column-start: 1;
-    grid-column-end: 3;
     list-style-type: none;
     background-color: var(--shadow);
-    margin-left: auto;
-    margin-right: auto;
-    left: 15%;
-    right: 15%;
     margin-top: 80px;
-    min-width: 180px;
-    max-width: 350px;
     text-transform: capitalize;
     text-align: center;
     padding: 10px;
     display: none;
     border-radius: 15px;
     z-index: 1;
-    border: 2px solid orange;
 }
 .suggestions li {
     border-bottom: 0.05rem dotted;
@@ -236,6 +190,8 @@ input:focus {
     flex-direction: column;
     margin-bottom: 25px;
     height: 70%;
+    width: 100%;
+    align-content: center;
     box-sizing: border-box;
     align-items: center;
 }
@@ -284,23 +240,20 @@ h1 {
 
 .button-container {
     text-align: center;
+    width: 40%;
 }
 
 button {
     box-sizing: border-box;
-    height: 3.125rem;
-    width: 12.5rem;
-    border-radius: 1rem;
+    height: 40px;
+    width: 100%;
+    border-radius: 15px;
     border: none;
-    background: linear-gradient(0.25turn, var(--main-color), var(--text-color2));
+    background: var(--background-color-two);
     font-weight: bold;
     font-size: 1.125rem;
     text-align: center;
-    color: #FFFFFF;
-}
-
-.buttonsmall {
-    width: 6rem;
+    color: var(--text-color);
 }
 
 button:hover {
@@ -345,43 +298,30 @@ footer p {
 }
 
 /* Mobile Styles */
-/*@media only screen and (max-width: 460px) {
-    .cover {
-        margin: auto;
-        max-width: 90%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 30px;
-        height: 600px;
-        margin-bottom: 70px;
-    }
-    .weather-now {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        background-color: var(--background-color-two);
-        border-radius: 15px;
+@media only screen and (max-width: 480px) {
+    .topHeader {
+        background-color: var(--background-color);
+        min-height: 6.15rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
-        text-transform: capitalize;
+        align-items: center;
+        max-width: 90%;
+        margin: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
-    .weather-hours {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        background-color: var(--background-color-two);
-        border-radius: 15px;
-        box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+    .search {
+        margin-bottom: 10px;
     }
-}*/
+    .autolocal {
+        width: 60%;
+    }
+    
+}
 
 /* Tablet Styles */
-@media only screen /*and (min-width: 461px)*/ and (max-width: 767px) {
+@media only screen /*and (min-width: 461px)*/ and (max-width: 820px) {
     .cover {
         margin: auto;
         max-width: 90%;
