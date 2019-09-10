@@ -87,14 +87,14 @@ function directionFinder(deg) {
 
 function backgroundFinder(description) {
     if (description == 'clear sky' || description == 'few clouds') {
-        return 'url(./src/photo/sun.jpg)'
+        return 'url(./photo/sun.jpg)'
     } else if (description == 'snow') {
-        return 'url(./src/photo/snow.jpg)'
+        return 'url(./photo/snow.jpg)'
     } else if (description == 'shower rain' || description == 'rain' || description == 'mist') {
-        return 'url(./src/photo/rain.jpg)'
+        return 'url(./photo/rain.jpg)'
     } else if (description == 'thunderstorm') {
-        return 'url(./src/photo/lightning.jpg)'
-    } else return 'url(./src/photo/darkclouds.jpg)';
+        return 'url(./photo/lightning.jpg)'
+    } else return 'url(./photo/darkclouds.jpg)';
 }
 
 function getWeather(latitude, longitude) {
@@ -112,7 +112,7 @@ function getWeather(latitude, longitude) {
             icon.parentElement.style.setProperty('--tran0', `${directionFinder(data.wind.deg)}(0deg)`)
             icon.parentElement.style.setProperty('--tran1', `${directionFinder(data.wind.deg)}(360deg)`)
             icon.parentElement.style.animationDuration = `${15/Math.floor(data.wind.speed)}s`
-            icon.setAttribute('src', `./src/icons/${data.weather[0].icon}.svg`)
+            icon.setAttribute('src', `./icons/${data.weather[0].icon}.svg`)
             tempValue.innerText = `${data.main.temp}° C`
             description.innerText = data.weather[0].description
             locale.innerText = `${data.name}, ${data.sys.country}`
@@ -132,7 +132,7 @@ function getWeather(latitude, longitude) {
                 hours[i].children[0].style.setProperty('--tran0', `${directionFinder(data.list[i+1].wind.deg)}(0deg)`)
                 hours[i].children[0].style.setProperty('--tran1', `${directionFinder(data.list[i+1].wind.deg)}(360deg)`)
                 hours[i].children[0].style.animationDuration = `${15/Math.floor(data.list[i+1].wind.speed)}s`
-                hours[i].children[0].firstChild.setAttribute('src', `./src/icons/${data.list[i+1].weather[0].icon}.svg`)
+                hours[i].children[0].firstChild.setAttribute('src', `./icons/${data.list[i+1].weather[0].icon}.svg`)
                 hours[i].children[1].innerText = `${data.list[i+1].main.temp}° C`
                 hours[i].children[2].innerText = data.list[i+1].weather[0].description
                 hours[i].children[3].innerText = data.list[i+1].dt_txt.slice(11,16)
