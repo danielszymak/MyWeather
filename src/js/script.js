@@ -141,7 +141,7 @@ function getWeather(latitude, longitude) {
                 days[i].children[0].style.setProperty('--tran0', `${directionFinder(data.list[7+i*8].wind.deg)}(0deg)`)
                 days[i].children[0].style.setProperty('--tran1', `${directionFinder(data.list[7+i*8].wind.deg)}(360deg)`)
                 days[i].children[0].style.animationDuration = `${15/Math.floor(data.list[7+i*8].wind.speed)}s`
-                days[i].children[0].firstChild.setAttribute('src', `./src/icons/${data.list[7+i*8].weather[0].icon}.svg`)
+                days[i].children[0].firstChild.setAttribute('src', `./icons/${data.list[7+i*8].weather[0].icon}.svg`)
                 days[i].children[1].innerText = `${data.list[7+i*8].main.temp}° C`
                 days[i].children[2].innerText = data.list[7+i*8].weather[0].description
                 days[i].children[3].innerText = data.list[7+i*8].dt_txt.slice(5,10)
